@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "868105926197",
+    "project_id": "chat-with-des-encryption",
+    "storage_bucket": "chat-with-des-encryption.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868105926197:android:47db7f4b0391a977f8a37c",
+        "android_client_info": {
+          "package_name": "com.example.char_with_des_encryption"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868105926197-dgm45cg5qukeoes9tqagtukrmgd0fjho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6IVKQbkjLMXA8LjX61DqtHE4ty4AbEFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868105926197-dgm45cg5qukeoes9tqagtukrmgd0fjho.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868105926197:android:40890a366a907c16f8a37c",
+        "android_client_info": {
+          "package_name": "com.example.chat_with_des_encryption"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868105926197-dgm45cg5qukeoes9tqagtukrmgd0fjho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6IVKQbkjLMXA8LjX61DqtHE4ty4AbEFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868105926197-dgm45cg5qukeoes9tqagtukrmgd0fjho.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

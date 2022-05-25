@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="156dp"
+        android:layout_height="156dp"
+        android:src="@drawable/app_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_text_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/app_logo"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Email"
+        android:paddingStart="18dp" />
+
+    <EditText
+        android:id="@+id/edit_text_senha"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/edit_text_email"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:background="@drawable/edit_text_background"
+        android:paddingStart="18dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+
+        />
+
+    <Button
+        android:id="@+id/botao_entrar"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_text_senha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_backgound"
+        android:text="Entrar"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/botao_nova_conta"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/botao_entrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_backgound"
+        android:text="Nova conta"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
