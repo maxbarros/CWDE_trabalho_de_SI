@@ -25,7 +25,7 @@ class NovaContaActivity : AppCompatActivity() {
         editNome = findViewById(R.id.edit_text_nome)
         editEmail = findViewById(R.id.edit_text_email)
         editSenha = findViewById(R.id.edit_text_senha)
-        botaoCriarConta = findViewById(R.id.botao_nova_conta)
+        botaoCriarConta = findViewById(R.id.botao_criar_conta)
 
         botaoCriarConta.setOnClickListener {
             val email = editEmail.text.toString()
