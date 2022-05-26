@@ -1,5 +1,6 @@
 package com.example.chat_with_des_encryption
 
+import DES
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -8,16 +9,17 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 
-class MensagemAdapter(val context: Context, val mensagemList: ArrayList<Mensagem>):
+class MensagemAdapter(val context: Context, val mensagemList: ArrayList<Mensagem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val ITEM_RECEBIDO = 1
     val ITEM_ENVIADO = 2
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        if (viewType == 1){
-            val view: View = LayoutInflater.from(context).inflate(R.layout.recebimento, parent, false)
+        if (viewType == 1) {
+            val view: View =
+                LayoutInflater.from(context).inflate(R.layout.recebimento, parent, false)
             return recebimentoViewHolder(view)
-        }else{
+        } else {
             val view: View = LayoutInflater.from(context).inflate(R.layout.envio, parent, false)
             return envioViewHolder(view)
         }
@@ -27,24 +29,37 @@ class MensagemAdapter(val context: Context, val mensagemList: ArrayList<Mensagem
 
         val mensagemAtual = mensagemList[position]
 
-        if( holder.javaClass == envioViewHolder::class.java){
-
+        if (holder.javaClass == envioViewHolder::class.java) {
 
 
             val viewHolder = holder as envioViewHolder
-            holder.mensagemEnviada.text = mensagemAtual.mensagem
+            if (mensagemAtual.mensagem != null) {
+                val mensagemEnviada =
+                    DES().decrypt(mensagemAtual.mensagem.toString().toByteArray(charset("utf-8")))
+                holder.mensagemEnviada.text = mensagemEnviada
+            }else{
+                holder.mensagemEnviada.text = mensagemAtual.mensagem
+            }
 
-        }else{
+        } else {
             val viewHolder = holder as recebimentoViewHolder
-            holder.mensagemRecebida.text = mensagemAtual.mensagem
+            if (mensagemAtual.mensagem != null) {
+                val mensagemRecebida =
+                    DES().decrypt(mensagemAtual.mensagem.toString().toByteArray(charset("utf-8")))
+                holder.mensagemRecebida.text = mensagemRecebida
+            }else{
+                holder.mensagemRecebida.text = mensagemAtual.mensagem
+            }
+
+
         }
     }
 
     override fun getItemViewType(position: Int): Int {
         val mensagemAtual = mensagemList[position]
-        if (FirebaseAuth.getInstance().currentUser?.uid.equals(mensagemAtual.remetenteId)){
+        if (FirebaseAuth.getInstance().currentUser?.uid.equals(mensagemAtual.remetenteId)) {
             return ITEM_ENVIADO
-        }else{
+        } else {
             return ITEM_RECEBIDO
         }
     }

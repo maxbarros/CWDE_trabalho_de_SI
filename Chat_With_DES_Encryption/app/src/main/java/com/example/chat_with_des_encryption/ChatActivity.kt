@@ -1,5 +1,6 @@
 package com.example.chat_with_des_encryption
 
+import DES
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -65,7 +66,8 @@ class ChatActivity : AppCompatActivity() {
             })
 
         botaoEnviar.setOnClickListener {
-            val mensagem = mensagemEditText.text.toString()
+            var mensagem = mensagemEditText.text.toString()
+            mensagem = DES().encrypt(mensagem).toString()
             val mensagemObject = Mensagem(mensagem,remetenteUid)
 
             mDbRef.child("chats").child(areaDoRemetente!!).child("mensagens").push()
