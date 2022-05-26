@@ -33,25 +33,13 @@ class MensagemAdapter(val context: Context, val mensagemList: ArrayList<Mensagem
 
 
             val viewHolder = holder as envioViewHolder
-            if (mensagemAtual.mensagem != null) {
-                val mensagemEnviada =
-                    DES().decrypt(mensagemAtual.mensagem.toString().toByteArray(charset("utf-8")))
-                holder.mensagemEnviada.text = mensagemEnviada
-            }else{
+
                 holder.mensagemEnviada.text = mensagemAtual.mensagem
-            }
+
 
         } else {
             val viewHolder = holder as recebimentoViewHolder
-            if (mensagemAtual.mensagem != null) {
-                val mensagemRecebida =
-                    DES().decrypt(mensagemAtual.mensagem.toString().toByteArray(charset("utf-8")))
-                holder.mensagemRecebida.text = mensagemRecebida
-            }else{
                 holder.mensagemRecebida.text = mensagemAtual.mensagem
-            }
-
-
         }
     }
 
