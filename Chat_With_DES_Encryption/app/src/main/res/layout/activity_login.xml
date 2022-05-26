@@ -34,6 +34,7 @@
         android:layout_below="@+id/edit_text_email"
         android:layout_marginTop="16dp"
         android:hint="Password"
+        android:inputType="textPassword"
         android:background="@drawable/edit_text_background"
         android:paddingStart="18dp"
         android:layout_marginLeft="28dp"

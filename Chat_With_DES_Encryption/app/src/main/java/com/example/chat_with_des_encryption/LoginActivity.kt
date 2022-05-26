@@ -23,6 +23,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        supportActionBar?.hide()
+
         mAuth = FirebaseAuth.getInstance()
 
         editEmail = findViewById(R.id.edit_text_email)
@@ -68,11 +70,13 @@ class LoginActivity : AppCompatActivity() {
 
     private fun vaiParaNovaConta() {
         val intent = Intent(this, NovaContaActivity::class.java)
+        finish()
         startActivity(intent)
     }
 
     private fun vaiParaMain() {
         val intent = Intent(this@LoginActivity, MainActivity::class.java)
+        finish()
         startActivity(intent)
     }
 }
