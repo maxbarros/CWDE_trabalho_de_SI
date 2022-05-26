@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NovaContaActivity">
+    tools:context=".NovaContaActivity"
+    android:background="#33334d">
 
     <ImageView
         android:id="@+id/app_logo"
         android:layout_width="156dp"
         android:layout_height="156dp"
-        android:src="@drawable/app_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="78dp"
-        />
+        android:src="@drawable/logo_cde" />
 
     <EditText
         android:id="@+id/edit_text_nome"
@@ -22,6 +22,7 @@
         android:layout_below="@+id/app_logo"
         android:layout_marginTop="16dp"
         android:hint="Nome"
+        android:textColorHint="@color/white"
         android:background="@drawable/edit_text_background"
         android:paddingStart="18dp"
         android:layout_marginLeft="28dp"
@@ -35,6 +36,7 @@
         android:layout_below="@+id/edit_text_nome"
         android:layout_marginTop="16dp"
         android:hint="Email"
+        android:textColorHint="@color/white"
         android:background="@drawable/edit_text_background"
         android:paddingStart="18dp"
         android:layout_marginLeft="28dp"
@@ -48,6 +50,7 @@
         android:layout_below="@+id/edit_text_email"
         android:layout_marginTop="16dp"
         android:hint="Senha"
+        android:textColorHint="@color/white"
         android:inputType="textPassword"
         android:background="@drawable/edit_text_background"
         android:paddingStart="18dp"
