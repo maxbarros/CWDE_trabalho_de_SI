@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler_view"
+        android:layout_above="@id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/edit_text_mensagem"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="96"
+            android:hint="Mensagem"
+            android:padding="10dp"
+            android:background="@drawable/mensagem_backgroung"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:id="@+id/botao_enviar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/send"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

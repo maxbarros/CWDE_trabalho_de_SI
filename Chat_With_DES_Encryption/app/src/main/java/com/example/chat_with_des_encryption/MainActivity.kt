@@ -28,10 +28,10 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 userList.clear()
                 for (postSnapShot in snapshot.children){
-                    val currentUser = postSnapShot.getValue(User::class.java)
+                    val usuarioAtual = postSnapShot.getValue(User::class.java)
 
-                    if(mAuth.currentUser?.uid != currentUser?.uid){
-                        userList.add(currentUser!!)
+                    if(mAuth.currentUser?.uid != usuarioAtual?.uid){
+                        userList.add(usuarioAtual!!)
                     }
 
 
