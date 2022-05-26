@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="ciano_primario">#009999</color>
     <color name="amarelo_primario">#ffff00</color>
+    <color name="escuroBackground">#33334d</color>
 </resources>

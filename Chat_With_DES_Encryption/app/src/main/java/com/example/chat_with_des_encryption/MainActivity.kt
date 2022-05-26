@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun vaiParaLogin() {
-        val intent = Intent(this@MainActivity, MainActivity::class.java)
+        val intent = Intent(this@MainActivity, LoginActivity::class.java)
         finish()
         startActivity(intent)
     }

@@ -6,7 +6,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_background"
+        android:background="@drawable/rebecimento_background"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp">
@@ -15,8 +15,9 @@
             android:id="@+id/text_mensagem_recebida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mensagem recebida"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:text="Mensagem recebida" />
 
     </RelativeLayout>
 

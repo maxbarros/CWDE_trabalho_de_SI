@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="#33334d">
+    android:background="@color/escuroBackground">
 
     <ImageView
         android:id="@+id/app_logo"
@@ -23,6 +23,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="28dp"
+        android:textColor="@color/white"
         android:background="@drawable/edit_text_background"
         android:hint="Email"
         android:textColorHint="@color/white"
@@ -32,6 +33,7 @@
         android:id="@+id/edit_text_senha"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:textColor="@color/white"
         android:layout_below="@+id/edit_text_email"
         android:layout_marginTop="16dp"
         android:hint="Password"
